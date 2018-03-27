@@ -1,4 +1,6 @@
 import {Component, OnInit} from "@angular/core";
+import {CognitoUtil} from "../service/cognito.service";
+import {Router} from "@angular/router";
 
 declare let AWS: any;
 declare let AWSCognito: any;
@@ -27,12 +29,15 @@ export class HomeLandingComponent {
 })
 export class HomeComponent implements OnInit {
 
-    constructor() {
+    constructor(public router: Router, public cognitoUtil: CognitoUtil) {
         console.log("HomeComponent constructor");
     }
 
     ngOnInit() {
-
+        console.log(this.cognitoUtil.getCurrentUser());
+        if (this.cognitoUtil.getCurrentUser() != null) {
+            this.router.navigate(['/securehome']);
+        }
     }
 }
 

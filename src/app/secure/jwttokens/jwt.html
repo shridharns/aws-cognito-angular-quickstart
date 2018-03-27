@@ -2,15 +2,27 @@
 <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#accesstoken">Access Token</a></li>
     <li><a data-toggle="tab" href="#idtoken">Id Token</a></li>
+    <li><a data-toggle="tab" href="#refreshtoken">Refresh Token</a></li>
 </ul>
 
 <div class="tab-content">
     <div id="accesstoken" class="tab-pane fade in active">
         <h3>Access Token</h3>
         <p>{{ stuff.accessToken }}</p>
+        <div>
+            <h3>Details from token:</h3>
+            <pre>{{ stuff.data }}</pre>
+        </div>
+        <button (click)="getNewAccessToken()" id="newAccessToken" type="button">
+            Get new access token
+        </button>
     </div>
     <div id="idtoken" class="tab-pane fade">
         <h3>Id Token</h3>
         <p>{{ stuff.idToken }}</p>
+    </div>
+    <div id="refreshtoken" class="tab-pane fade">
+        <h3>Refresh Token</h3>
+        <p>{{ stuff.refreshToken }}</p>
     </div>
 </div>

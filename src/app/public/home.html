@@ -1,28 +1,97 @@
 <!-- Navigation -->
 <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
     <div class="container topnav">
+
+        <div id="personalToolbar3_0" class="tp-enabled">
+            <div id="personalToolbar" class="sf3   ">
+
+                <a href="/" title="Go to the Shutterfly home page." name="&amp;lid=GlobalHeader_Home" class="sf3-sfly">
+                    <i class="sf3-icon sf3-icon-sfly icon-active"></i>
+                </a><a href="/tinyprints" title="Go to the Tinyprints home page." name="&amp;lid=GlobalHeader_Tiny Prints" class="sf3-tp">
+                <i class="sf3-icon sf3-icon-tp "></i>
+            </a>
+
+
+                <ul class="sf3-inline-menu sf3-inline-menu-item-slim clearfix pull-right not-mobile">
+
+                    <li class="sf3-inline-menu-item">
+
+
+
+                        <a [routerLink]="['/home/login']" name="&amp;lid=GlobalHeader_Sign in" >Sign in</a>
+
+
+                    </li>
+
+                    <li class="sf3-inline-menu-item">
+
+
+                        <a name="&amp;lid=GlobalHeader_Sign up" [routerLink]="['/home/register']">Sign up</a>
+
+
+                    </li>
+
+
+
+                    <li class="sf3-inline-menu-item">
+                        <a id="sfly3-my-shutterfly" [routerLink]="['/securehome/myprofile']" title="View your recent activity, track your orders and manage your account." name="&amp;lid=GlobalHeader_My Account">
+                            My Account
+                        </a>
+                    </li>
+
+                    <li class="sf3-inline-menu-item">
+                        <a id="sfly3-my-pictures" href="/nav/mypics.sfly" title="View, organize and edit your photos." name="&amp;lid=GlobalHeader_My Photos">
+                            <i class="sf3-icon sf3-icon-my-photos"></i>My Photos
+                        </a>
+                    </li>
+
+
+
+
+                    <li class="sf3-inline-menu-item">
+                        <a id="sfly3-share-sites" href="/nav/share.sfly" title="View your Share sites" name="&amp;lid=GlobalHeader_Share Sites">
+                            Share Sites
+                        </a>
+                    </li>
+
+
+
+                    <li id="cart-count-container" class="sf3-inline-menu-item ">
+                        <a id="sfly3-my-cart" href="/checkout/start.sfly" name="&amp;lid=GlobalHeader_carticon">
+                            &nbsp;
+                            <i class="sf3-icon sf3-icon-cart-lg call-to-action sf3-icon-cart-lg-selected"></i>
+                            <i id="cart-count-badge" class="sf3-icon sf3-icon-cart-badge">0</i>
+                        </a>
+                    </li>
+                </ul>
+
+
+            </div>
+        </div>
+
+
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand topnav" href="#">Cognito QuickStart</a>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a [routerLink]="['/home']">Home</a>
-                </li>
-                <li>
-                    <a [routerLink]="['/home/login']">Login</a>
-                </li>
-            </ul>
-        </div>
+        <!--<div class="navbar-header">-->
+            <!--<button type="button" class="navbar-toggle" data-toggle="collapse"-->
+                    <!--data-target="#bs-example-navbar-collapse-1">-->
+                <!--<span class="sr-only">Toggle navigation</span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+            <!--</button>-->
+            <!--<a class="navbar-brand topnav" href="#">Cognito QuickStart</a>-->
+        <!--</div>-->
+        <!--&lt;!&ndash; Collect the nav links, forms, and other content for toggling &ndash;&gt;-->
+        <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">-->
+            <!--<ul class="nav navbar-nav navbar-right">-->
+                <!--<li>-->
+                    <!--<a [routerLink]="['/home']">Home</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a [routerLink]="['/home/login']">Login</a>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</div>-->
         <!-- /.navbar-collapse -->
     </div>
     <!-- /.container -->
